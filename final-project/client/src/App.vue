@@ -35,13 +35,13 @@ header > img {
 }
 
 nav {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   margin: 0;
   display: flex;
   justify-content: flex-start;
+  gap: 1rem;
 }
 
 

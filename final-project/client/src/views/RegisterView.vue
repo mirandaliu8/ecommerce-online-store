@@ -12,6 +12,8 @@
           required
           autofocus
         />
+        <div>&nbsp;</div>
+
         <label for="name">Name</label>
         <input
           type="text"
@@ -20,6 +22,8 @@
           v-model="user.name"
           required
         />
+        <div>&nbsp;</div>
+
         <label for="password">Password</label>
         <input
           type="password"
@@ -28,6 +32,8 @@
           v-model="user.password"
           required
         />
+        <div>&nbsp;</div>
+
         <label for="confirmPassword">Confirm password</label>
         <input
           type="password"
@@ -36,6 +42,7 @@
           v-model="user.confirmPassword"
           required
         />
+        <div>&nbsp;</div>
 
         <label for="address">Address</label>
         <input
@@ -44,6 +51,7 @@
           placeholder="Address"
           v-model="user.address"
         />
+        <div>&nbsp;</div>
 
         <label for="city">City</label>
         <input type="text" id="city" placeholder="City" v-model="user.city" />
@@ -68,6 +76,8 @@
           minlength="5"
           maxlength="5"
         />
+        <div>&nbsp;</div>
+
         <div></div>
         <div>
           <button type="submit">Create Account</button>
@@ -147,4 +157,10 @@ export default {
 </script>
 
 <style scoped>
+form {
+    background-color: lightgray;
+    padding: 20px;
+    height: max-content;
+    width: max-content;
+}
 </style>

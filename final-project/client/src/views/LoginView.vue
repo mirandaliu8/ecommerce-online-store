@@ -12,6 +12,8 @@
           required
           autofocus
         />
+        <div>&nbsp;</div>
+
         <label for="password">Password</label>
         <input
           type="password"
@@ -20,6 +22,8 @@
           v-model="user.password"
           required
         />
+        <div>&nbsp;</div>
+        
         <div><button type="submit">Sign in</button></div>
       </div>
       <hr/>
@@ -68,5 +72,10 @@ export default {
 </script>
 
 <style scoped>
-
+form {
+    background-color: lightgray;
+    padding: 20px;
+    height: max-content;
+    width: max-content;
+}
 </style>
