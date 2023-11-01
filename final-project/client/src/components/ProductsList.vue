@@ -12,6 +12,7 @@ import ProductCard from "../components/ProductCard.vue";
 
 export default {
     name: "products-list",
+    props: ['products'],
     components: {
         ProductCard
     }
