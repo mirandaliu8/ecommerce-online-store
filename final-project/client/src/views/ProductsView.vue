@@ -52,6 +52,7 @@
 
 <script>
 import LoadingSpinner from "../components/LoadingSpinner.vue";
+import productService from "../services/ProductService";
 
 export default {
   name: "ProductsView",
@@ -62,6 +63,7 @@ export default {
     return {
       isLoading: false,
       cardView: true,
+      productData: [],
     };
   },
 
@@ -71,9 +73,16 @@ export default {
     },
   },
 
-  methods: {},
+  methods: {
+    getAllProducts() {
+      productService.list().then((response)=> {
+        this.productData = response.data;
+      });
+    }
+  },
 
-  created() {},
+  created() {
+  },
 };
 </script>
 
