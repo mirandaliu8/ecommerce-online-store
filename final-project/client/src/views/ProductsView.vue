@@ -6,6 +6,7 @@
         <loading-spinner id="spinner" v-bind:spin="isLoading" />
       </h1>
     </div>
+    <products-list />
     <!-- <h2>Loading spinner demonstration</h2>
     <p>
       This is a demonstration of how you can show or hide a "spinner" icon to
@@ -52,18 +53,18 @@
 
 <script>
 import LoadingSpinner from "../components/LoadingSpinner.vue";
-import productService from "../services/ProductService";
+import ProductsList from '../components/ProductsList.vue';
 
 export default {
   name: "ProductsView",
   components: {
     LoadingSpinner,
+    ProductsList,
   },
   data() {
     return {
       isLoading: false,
       cardView: true,
-      productData: [],
     };
   },
 
@@ -71,18 +72,7 @@ export default {
     isLoggedIn() {
       return this.$store.state.token.length > 0;
     },
-  },
-
-  methods: {
-    getAllProducts() {
-      productService.list().then((response)=> {
-        this.productData = response.data;
-      });
-    }
-  },
-
-  created() {
-  },
+  }
 };
 </script>
 

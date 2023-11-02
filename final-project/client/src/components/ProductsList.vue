@@ -9,12 +9,29 @@
 
 <script>
 import ProductCard from "../components/ProductCard.vue";
+import ProductService from "../services/ProductService";
 
 export default {
     name: "products-list",
-    props: ['products'],
     components: {
         ProductCard
+    },
+    data() {
+        return {
+            products: []
+        }
+    },
+    created() {
+        ProductService.list().then((response) => {
+            this.products = response.data;
+        });
+    },
+    methods: {
+        loadProducts() {
+            ProductService.list().then((response) => {
+                this.products = response.data;
+            });
+        }
     }
 }
 </script>
