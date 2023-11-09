@@ -6,6 +6,12 @@
         <loading-spinner id="spinner" v-bind:spin="isLoading" />
       </h1>
     </div>
+        <p id="login-message" v-if="!isLoggedIn">
+      Welcome! You may browse anonymously as much as you wish,
+      but you must
+      <router-link v-bind:to="{ name: 'login' }">Login</router-link> 
+      to add items to your shopping cart.
+    </p>
     <products-list />
     <!-- <h2>Loading spinner demonstration</h2>
     <p>
@@ -21,12 +27,7 @@
     </p>
     <input type="checkbox" name="loading" id="loading" v-model="isLoading" /> Is
     Loading -->
-    <p id="login-message" v-if="!isLoggedIn">
-      Welcome! You may browse anonymously as much as you wish,<br />
-      but you must
-      <router-link v-bind:to="{ name: 'login' }">Login</router-link> to add
-      items to your shopping cart.
-    </p>
+
     <h2>Font-awesome demonstration</h2>
     <p>
       This code shows you how you can include Font-awesome icons on your page. Below are two icons: 

@@ -4,7 +4,9 @@
           <div class="sku">{{ product.productSku }}</div>
           <div class="price">{{ product.price }}</div>
           <div class="product-name">{{ product.name }}</div>
-          <div class="product-image"></div>
+          <div class="product-image">
+            <img v-bind:src="product.imageName" />
+          </div>
           <div class="cart"></div>
       </article>
   </section>
