@@ -7,7 +7,9 @@
           <div class="product-image">
             <img v-bind:src="product.imageName" />
           </div>
-          <div class="cart"></div>
+          <div class="cart">
+            <i class="fa-solid fa-cart-plus icon action" title="Add item to cart"></i>
+          </div>
       </article>
   </section>
 </template>
